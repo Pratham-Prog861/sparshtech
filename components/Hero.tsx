@@ -4,16 +4,30 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export default function Hero() {
   return (
     <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
-      {/* Enhanced Background with Multiple Gradients */}
       <div className="absolute inset-0 -z-10 h-full w-full bg-background">
-        {/* Grid Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-size[14px_24px]"></div>
+        <motion.div
+          className={cn(
+            "absolute inset-0",
+            "bg-size-[20px_20px]",
+            "bg-[radial-gradient(#6366f1_1px,transparent_1px)]",
+            "dark:bg-[radial-gradient(#818cf8_1px,transparent_1px)]"
+          )}
+          animate={{
+            opacity: [0, 1, 0],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        <div className="absolute inset-0 bg-background mask-[radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
 
-        {/* Multiple Gradient Orbs */}
         <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-primary/20 opacity-20 blur-[100px] animate-pulse"></div>
         <div
           className="absolute left-1/4 top-1/4 -z-10 h-[200px] w-[200px] rounded-full bg-purple-500/10 opacity-20 blur-[80px] animate-pulse"
