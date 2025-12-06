@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-linear-to-r from-primary to-primary/60">
+            <h3 className="text-2xl font-bold bg-clip-text text-black bg-linear-to-r from-primary to-primary/60">
               SparshTech
             </h3>
             <p className="text-muted-foreground text-sm leading-relaxed">

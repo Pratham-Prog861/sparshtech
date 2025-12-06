@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -87,50 +88,116 @@ const services = [
 
 const Tech = [
   {
-    Title : "Frontend Development",
+    Title: "Frontend Development",
     language: [
-      "HTML",
-      "CSS",
-      "Tailwind CSS",
-      "JavaScript",
-      "TypeScript",
-      "React",
-      "Next.js",
-    ]
+      {
+        name: "HTML",
+        logo: "https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg",
+      },
+      {
+        name: "CSS",
+        logo: "https://www.vectorlogo.zone/logos/w3_css/w3_css-icon~old.svg",
+      },
+      {
+        name: "Tailwind CSS",
+        logo: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
+      },
+      {
+        name: "JavaScript",
+        logo: "https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg",
+      },
+      {
+        name: "TypeScript",
+        logo: "https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg",
+      },
+      {
+        name: "React",
+        logo: "https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg",
+      },
+      {
+        name: "Next.js",
+        logo: "https://www.vectorlogo.zone/logos/nextjs/nextjs-icon.svg",
+      },
+    ],
   },
   {
     Title: "Backend Development",
     language: [
-      "Node.js",
-      "Express.js",
-    ]
+      {
+        name: "Node.js",
+        logo: "https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg",
+      },
+      {
+        name: "Express.js",
+        logo: "https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg",
+      },
+    ],
   },
   {
-    Title : "Animation / Component Libray",
+    Title: "Animation / Component Library",
     language: [
-      "Framer Motion",
-      "Tailwind CSS",
-      "Shadcn UI",
-      "Aceternity UI"
-    ]
+      {
+        name: "Framer Motion",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/framermotion/framermotion-original.svg",
+      },
+      {
+        name: "Tailwind CSS",
+        logo: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
+      },
+      {
+        name: "Shadcn UI",
+        logo: "https://ui.shadcn.com/favicon.ico",
+      },
+      {
+        name: "Aceternity UI",
+        logo: "https://ui.aceternity.com/logo.png",
+      },
+    ],
   },
   {
     Title: "Database",
     language: [
-      "MongoDB",
-      "Firebase",
-      "Supabase",
-      "Neon"
-    ]
+      {
+        name: "MongoDB",
+        logo: "https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg",
+      },
+      {
+        name: "Firebase",
+        logo: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
+      },
+      {
+        name: "Supabase",
+        logo: "https://www.vectorlogo.zone/logos/supabase/supabase-icon.svg",
+      },
+    ],
   },
   {
     Title: "Version Control",
     language: [
-      "Git",
-      "GitHub",
-    ]
-  }
-]
+      {
+        name: "Git",
+        logo: "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg",
+      },
+      {
+        name: "GitHub",
+        logo: "https://www.vectorlogo.zone/logos/github/github-icon.svg",
+      },
+    ],
+  },
+  {
+    Title: "Mobile Development",
+    language: [
+      {
+        name: "React Native",
+        logo: "https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg",
+      },
+      {
+        name: "Expo GO",
+        logo: "https://www.vectorlogo.zone/logos/expoio/expoio-icon.svg",
+      },
+    ],
+  },
+];
 
 export default function ServicesPage() {
   return (
@@ -170,6 +237,51 @@ export default function ServicesPage() {
               </ul>
             </div>
           ))}
+        </div>
+
+        {/* Tech Stack Section */}
+        <div className="mb-20">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Our Technology Stack
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              We use cutting-edge technologies to build robust, scalable, and
+              modern solutions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {Tech.map((tech, index) => (
+              <div
+                key={index}
+                className="bg-background p-8 rounded-xl border border-border shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
+              >
+                <div className="h-14 w-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary">
+                  <div className="h-2 w-2 rounded-full bg-primary" />
+                </div>
+                <h3 className="text-2xl font-semibold mb-4">{tech.Title}</h3>
+                <div className="flex flex-wrap gap-2">
+                  {tech.language.map((lang, idx) => (
+                    <span
+                      key={idx}
+                      className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium bg-secondary/50 text-foreground rounded-lg border border-border/50 hover:bg-primary/10 hover:border-primary/50 transition-all duration-200 cursor-default"
+                    >
+                      <img
+                        src={lang.logo}
+                        alt={lang.name}
+                        className="h-4 w-4 object-contain"
+                        onError={(e) => {
+                          e.currentTarget.style.display = "none";
+                        }}
+                      />
+                      {lang.name}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* CTA Section */}
