@@ -289,9 +289,9 @@ const AIChatbot = () => {
                   <span className="absolute bottom-0 right-0 h-3 w-3 rounded-full bg-green-400 border-2 border-white"></span>
                 </div>
                 <div>
-                  <h3 className="font-semibold">Learning Assistant</h3>
+                  <h3 className="font-semibold">AI Chatbot</h3>
                   <p className="text-xs text-white/80">
-                    Powered by CodeWithPratham
+                    Powered by SparshTech
                   </p>
                 </div>
               </div>
