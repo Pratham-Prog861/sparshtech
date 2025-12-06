@@ -12,6 +12,8 @@ export const metadata: Metadata = {
     "We build modern websites, mobile apps, custom software, and intelligent chatbots that empower businesses to grow.",
 };
 
+import AIChatbot from "@/components/AIChatbot";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -23,6 +25,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <AIChatbot />
       </body>
     </html>
   );

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Skeleton } from "@/components/ui/skeleton";
+import { Linkedin } from "lucide-react";
 
 const teamMembers = [
   {
@@ -10,24 +11,35 @@ const teamMembers = [
     role: "CEO & Founder",
     image:
       "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop",
+    description:
+      "He is the founder and CEO of Sparshtech. He has a passion for technology and a talent for innovation. He is a true leader and a role model for many.",
+    linkedin: "",
   },
   {
     name: "Pratham Darji",
     role: "CTO",
-    image:
-      "",
+    image: "https://i.postimg.cc/Yq3nv6v9/linkedin-ai-4.png",
+    description:
+      "He is the CTO of Sparshtech. He has a passion for technology and a talent for innovation. He is a true leader and a role model for many.",
+    linkedin: "https://www.linkedin.com/in/pratham-darji-b704092a2/",
   },
   {
     name: "Michael Chen",
-    role: "CTO",
+    role: "COO",
     image:
       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
+    description:
+      "He is the COO of Sparshtech. He has a passion for technology and a talent for innovation. He is a true leader and a role model for many.",
+    linkedin: "",
   },
   {
     name: "Emily Davis",
     role: "Marketing Head",
     image:
       "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop",
+    description:
+      "He is the Marketing Head of Sparshtech. He has a passion for technology and a talent for innovation. He is a true leader and a role model for many.",
+    linkedin: "",
   },
 ];
 
@@ -35,16 +47,31 @@ export default function Team() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 2000); // Simulate loading
+    const timer = setTimeout(() => setLoading(false), 2000);
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <section className="py-20 bg-secondary/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12">
-          Meet Our Team
-        </h2>
+    <section className="py-20 bg-secondary/20 relative overflow-hidden">
+      {/* Decorative background elements */}
+      <div className="absolute top-20 right-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-20 left-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 bg-linear-to-r from-primary via-accent to-primary bg-clip-text bg-size-200 animate-gradient-text">
+            Meet Our Team
+          </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            The passionate minds behind our innovative solutions.
+          </p>
+        </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {loading
@@ -58,23 +85,49 @@ export default function Team() {
             : teamMembers.map((member, index) => (
                 <motion.div
                   key={member.name}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   whileHover={{ y: -10 }}
-                  className="flex flex-col items-center bg-background p-6 rounded-xl shadow-sm border border-border"
+                  className="group relative h-full"
                 >
-                  <div className="relative h-48 w-48 mb-4 overflow-hidden rounded-full border-4 border-secondary">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="h-full w-full object-cover"
-                    />
+                  <div className="absolute -inset-0.5 bg-linear-to-r from-primary via-accent to-primary rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500 blur group-hover:animate-gradient-text bg-size-200" />
+                  <div className="relative flex flex-col items-center bg-background p-6 pb-16 rounded-2xl shadow-sm group-hover:shadow-2xl border border-border h-full transition-all duration-300">
+                    {/* Image Container */}
+                    <div className="relative mb-6 group-hover:scale-105 transition-transform duration-500">
+                      <div className="absolute -inset-1 bg-linear-to-r from-primary to-accent rounded-full opacity-0 group-hover:opacity-70 blur transition-opacity duration-500" />
+                      <div className="relative h-48 w-48 overflow-hidden rounded-full border-4 border-secondary group-hover:border-transparent transition-colors duration-300 bg-background">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        />
+                      </div>
+                    </div>
+
+                    <h3 className="text-xl font-bold mb-1 group-hover:text-primary transition-colors duration-300">
+                      {member.name}
+                    </h3>
+                    <p className="text-sm font-medium text-muted-foreground mb-4 px-3 py-1 rounded-full bg-secondary/50 group-hover:bg-primary/10 group-hover:text-primary transition-all duration-300">
+                      {member.role}
+                    </p>
+                    <p className="text-sm text-muted-foreground text-center line-clamp-4 group-hover:text-foreground/80 transition-colors duration-300">
+                      {member.description}
+                    </p>
+
+                    <div className="absolute bottom-4 right-4">
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-background border border-border text-muted-foreground hover:text-white hover:bg-[#0077b5] hover:border-[#0077b5] transition-all duration-300 shadow-sm hover:shadow-md hover:scale-110"
+                      >
+                        <Linkedin className="h-5 w-5" />
+                      </a>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold">{member.name}</h3>
-                  <p className="text-muted-foreground">{member.role}</p>
                 </motion.div>
               ))}
         </div>
