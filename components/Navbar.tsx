@@ -7,6 +7,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import TrueFocus from "./TrueFocus";
+
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -27,9 +29,14 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="shrink-0 flex items-center gap-2">
-            <span className="text-2xl font-bold bg-clip-text bg-linear-to-r from-primary to-primary/60 text-black">
-              SparshTech
-            </span>
+            <TrueFocus
+              sentence="Sparsh Tech"
+              manualMode={false}
+              blurAmount={5}
+              borderColor="#a929ff"
+              animationDuration={2}
+              pauseBetweenAnimations={1}
+            />
           </Link>
 
           {/* Desktop Menu */}
