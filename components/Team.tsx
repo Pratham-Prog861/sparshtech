@@ -10,36 +10,41 @@ const teamMembers = [
   {
     name: "Ronak Ganava",
     role: "CEO & Founder",
-    image: "ceo.jpg",
-    description: "He is the founder and CEO of Sparshtech. He has a passion for technology and a talent for innovation. He is a true leader and a role model for many.",
+    image: "/ceo.jpg",
+    description:
+      "He is the founder and CEO of Sparshtech. He has a passion for technology and a talent for innovation. He is a true leader and a role model for many.",
     linkedin: "",
   },
   {
     name: "Pratham Darji",
     role: "CTO",
     image: "/cto.jpg",
-    description: "He is the CTO of Sparshtech. He has a passion for technology and a talent for innovation. He is a true leader and a role model for many.",
+    description:
+      "He is the CTO of Sparshtech. He has a passion for technology and a talent for innovation. He is a true leader and a role model for many.",
     linkedin: "https://www.linkedin.com/in/pratham-darji-b704092a2/",
   },
   {
     name: "Aryan Patel",
     role: "COO",
-    image: "coo.jpg",
-    description: "He is the COO of Sparshtech. He has a passion for technology and a talent for innovation. He is a true leader and a role model for many.",
+    image: "/coo.jpg",
+    description:
+      "He is the COO of Sparshtech. He has a passion for technology and a talent for innovation. He is a true leader and a role model for many.",
     linkedin: "",
   },
   {
     name: "Nevin",
     role: "Co-Founder",
-    image: "co-founder.jpg",
-    description: "He is the Co-Founder of Sparshtech. He has a passion for technology and a talent for innovation. He is a true leader and a role model for many.",
+    image: "/co-founder.jpg",
+    description:
+      "He is the Co-Founder of Sparshtech. He has a passion for technology and a talent for innovation. He is a true leader and a role model for many.",
     linkedin: "",
   },
   {
     name: "Sandesh Mandora",
     role: "BPM",
-    image: "bpm.jpg",
-    description: "He is the BPM of Sparshtech. He has a passion for technology and a talent for innovation. He is a true leader and a role model for many.",
+    image: "/bpm.jpg",
+    description:
+      "He is the BPM of Sparshtech. He has a passion for technology and a talent for innovation. He is a true leader and a role model for many.",
     linkedin: "",
   },
 ];
