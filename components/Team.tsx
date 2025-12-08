@@ -10,36 +10,36 @@ const teamMembers = [
   {
     name: "Ronak Ganava",
     role: "CEO & Founder",
-    image:
-      "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop",
-    description:
-      "He is the founder and CEO of Sparshtech. He has a passion for technology and a talent for innovation. He is a true leader and a role model for many.",
+    image: "ceo.jpg",
+    description: "He is the founder and CEO of Sparshtech. He has a passion for technology and a talent for innovation. He is a true leader and a role model for many.",
     linkedin: "",
   },
   {
     name: "Pratham Darji",
     role: "CTO",
-    image: "https://i.postimg.cc/Yq3nv6v9/linkedin-ai-4.png",
-    description:
-      "He is the CTO of Sparshtech. He has a passion for technology and a talent for innovation. He is a true leader and a role model for many.",
+    image: "/cto.jpg",
+    description: "He is the CTO of Sparshtech. He has a passion for technology and a talent for innovation. He is a true leader and a role model for many.",
     linkedin: "https://www.linkedin.com/in/pratham-darji-b704092a2/",
   },
   {
-    name: "Michael Chen",
+    name: "Aryan Patel",
     role: "COO",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
-    description:
-      "He is the COO of Sparshtech. He has a passion for technology and a talent for innovation. He is a true leader and a role model for many.",
+    image: "coo.jpg",
+    description: "He is the COO of Sparshtech. He has a passion for technology and a talent for innovation. He is a true leader and a role model for many.",
     linkedin: "",
   },
   {
-    name: "Emily Davis",
-    role: "Marketing Head",
-    image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop",
-    description:
-      "He is the Marketing Head of Sparshtech. He has a passion for technology and a talent for innovation. He is a true leader and a role model for many.",
+    name: "Nevin",
+    role: "Co-Founder",
+    image: "co-founder.jpg",
+    description: "He is the Co-Founder of Sparshtech. He has a passion for technology and a talent for innovation. He is a true leader and a role model for many.",
+    linkedin: "",
+  },
+  {
+    name: "Sandesh Mandora",
+    role: "BPM",
+    image: "bpm.jpg",
+    description: "He is the BPM of Sparshtech. He has a passion for technology and a talent for innovation. He is a true leader and a role model for many.",
     linkedin: "",
   },
 ];
