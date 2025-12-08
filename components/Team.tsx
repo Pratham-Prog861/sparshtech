@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Linkedin } from "lucide-react";
+import Image from "next/image";
 
 const teamMembers = [
   {
@@ -94,15 +95,15 @@ export default function Team() {
                 >
                   <div className="absolute -inset-0.5 bg-linear-to-r from-primary via-accent to-primary rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500 blur group-hover:animate-gradient-text bg-size-200" />
                   <div className="relative flex flex-col items-center bg-background p-6 pb-16 rounded-2xl shadow-sm group-hover:shadow-2xl border border-border h-full transition-all duration-300">
-                    {/* Image Container */}
                     <div className="relative mb-6 group-hover:scale-105 transition-transform duration-500">
                       <div className="absolute -inset-1 bg-linear-to-r from-primary to-accent rounded-full opacity-0 group-hover:opacity-70 blur transition-opacity duration-500" />
                       <div className="relative h-48 w-48 overflow-hidden rounded-full border-4 border-secondary group-hover:border-transparent transition-colors duration-300 bg-background">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
+                        <Image
                           src={member.image}
                           alt={member.name}
-                          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          className="object-cover transition-transform duration-700 group-hover:scale-110"
                         />
                       </div>
                     </div>
