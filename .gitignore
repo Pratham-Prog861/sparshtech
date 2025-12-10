@@ -39,6 +39,4 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-prepare-deploy.js
-DEPLOYMENT_GUIDE.md
+HOSTINGER_DEPLOYMENT_GUIDE.md

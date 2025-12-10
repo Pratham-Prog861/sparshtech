@@ -8,35 +8,47 @@ import AIChatbot from "@/components/AIChatbot";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://sparshtech.in'),
   title: {
-    default: "SparshTech - Modern Digital Solutions",
+    default: "SparshTech - Web Development, AI Chatbots & Custom Software Solutions",
     template: "%s | SparshTech",
   },
   description:
-    "We build modern websites, mobile apps, custom software, and intelligent chatbots that empower businesses to grow. Transform your digital presence with SparshTech.",
+    "Leading digital solutions provider in India. We build modern websites, mobile apps, custom software, and AI-powered chatbots that empower businesses to grow. Get expert web development services and intelligent automation solutions.",
   keywords: [
-    "Web Development",
-    "Mobile Apps",
-    "Custom Software",
+    "Web Development India",
+    "Mobile App Development",
+    "Custom Software Development",
     "AI Chatbots",
     "Digital Solutions",
     "Tech Agency",
     "Software Development Company",
     "SparshTech",
+    "Business Automation",
+    "AI Solutions",
+    "Website Design",
+    "React Development",
+    "Next.js Development",
   ],
   authors: [{ name: "SparshTech Team" }],
   creator: "SparshTech",
+  publisher: "SparshTech",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://sparshtech.in",
-    title: "SparshTech - Modern Digital Solutions",
+    title: "SparshTech - Web Development, AI Chatbots & Custom Software Solutions",
     description:
-      "We build modern websites, mobile apps, custom software, and intelligent chatbots that empower businesses to grow.",
+      "Leading digital solutions provider in India. We build modern websites, mobile apps, custom software, and AI-powered chatbots that empower businesses to grow.",
     siteName: "SparshTech",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://sparshtech.in/og-image.png",
         width: 1200,
         height: 630,
         alt: "SparshTech - Modern Digital Solutions",
@@ -45,16 +57,30 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SparshTech - Modern Digital Solutions",
+    title: "SparshTech - Web Development, AI Chatbots & Custom Software Solutions",
     description:
-      "We build modern websites, mobile apps, custom software, and intelligent chatbots that empower businesses to grow.",
-    images: ["/og-image.png"],
+      "Leading digital solutions provider in India. We build modern websites, mobile apps, custom software, and AI-powered chatbots that empower businesses to grow.",
+    images: ["https://sparshtech.in/og-image.png"],
     creator: "@sparshtech",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
+  },
+  verification: {
+    google: 'your-google-verification-code',
   },
 };
 
