@@ -27,7 +27,6 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
           <Link href="/" className="shrink-0 flex items-center gap-2">
             <TrueFocus
               sentence="Sparsh Tech"
@@ -39,7 +38,6 @@ export default function Navbar() {
             />
           </Link>
 
-          {/* Desktop Menu */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navLinks.map((link) => (
@@ -59,14 +57,12 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* CTA Button (Desktop) */}
           <div className="hidden md:block">
             <Button asChild variant="default" size="sm">
               <Link href="/contact">Get Started</Link>
             </Button>
           </div>
 
-          {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <button
               onClick={toggleMenu}
@@ -83,7 +79,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div

@@ -1,11 +1,11 @@
 import Vision from "@/components/Vision";
 import Team from "@/components/Team";
+import Image from "next/image";
 
 export default function AboutPage() {
   return (
     <main className="pt-32 pb-20 min-h-screen bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Hero Section */}
         <div className="text-center mb-20">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             About SparshTech
@@ -16,13 +16,13 @@ export default function AboutPage() {
           </p>
         </div>
 
-        {/* Story Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
           <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop"
               alt="Team meeting"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="absolute inset-0 w-full h-full object-cover"
             />
           </div>
@@ -46,7 +46,6 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Mission & Values */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
           <div className="bg-secondary/20 p-8 rounded-xl border border-border">
             <h3 className="text-xl font-bold mb-4">Innovation</h3>
@@ -71,10 +70,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Vision Section Reuse */}
         <Vision />
-
-        {/* Team Section Reuse */}
         <Team />
       </div>
     </main>

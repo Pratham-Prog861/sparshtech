@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 export default function AboutUs() {
   return (
@@ -43,10 +44,11 @@ export default function AboutUs() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl"
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop"
               alt="Team working together"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="absolute inset-0 w-full h-full object-cover"
             />
           </motion.div>

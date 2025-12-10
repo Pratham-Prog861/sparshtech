@@ -40,7 +40,6 @@ export default function Hero() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-        {/* Animated Brand Name with Gradient */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -78,7 +77,6 @@ export default function Hero() {
           </motion.h1>
         </motion.div>
 
-        {/* Main Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -110,7 +108,6 @@ export default function Hero() {
           </h2>
         </motion.div>
 
-        {/* Subtitle */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -129,7 +126,6 @@ export default function Hero() {
           </p>
         </motion.div>
 
-        {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -160,7 +156,6 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* Floating Elements */}
         <motion.div
           className="absolute top-20 left-10 w-20 h-20 rounded-full bg-primary/10 blur-xl"
           animate={{

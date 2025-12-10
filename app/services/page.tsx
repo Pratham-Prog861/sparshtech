@@ -239,7 +239,6 @@ export default function ServicesPage() {
           ))}
         </div>
 
-        {/* Tech Stack Section */}
         <div className="mb-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -284,7 +283,6 @@ export default function ServicesPage() {
           </div>
         </div>
 
-        {/* CTA Section */}
         <div className="bg-secondary/30 rounded-2xl p-12 text-center">
           <h2 className="text-3xl font-bold mb-4">Need a custom solution?</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">

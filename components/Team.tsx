@@ -13,7 +13,7 @@ const teamMembers = [
     image: "/ceo.jpg",
     description:
       "He is the founder and CEO of Sparshtech. He has a passion for technology and a talent for innovation. He is a true leader and a role model for many.",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/ronak-ganava-a69327341/",
   },
   {
     name: "Pratham Darji",
@@ -24,20 +24,20 @@ const teamMembers = [
     linkedin: "https://www.linkedin.com/in/pratham-darji-b704092a2/",
   },
   {
-    name: "Aryan Patel",
-    role: "COO",
-    image: "/coo.jpg",
-    description:
-      "He is the COO of Sparshtech. He has a passion for technology and a talent for innovation. He is a true leader and a role model for many.",
-    linkedin: "",
-  },
-  {
     name: "Nevin",
     role: "Co-Founder",
     image: "/co-founder.jpg",
     description:
       "He is the Co-Founder of Sparshtech. He has a passion for technology and a talent for innovation. He is a true leader and a role model for many.",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/nevinthekkeparambil/",
+  },
+  {
+    name: "Aryan Patel",
+    role: "COO",
+    image: "/coo.jpg",
+    description:
+      "He is the COO of Sparshtech. He has a passion for technology and a talent for innovation. He is a true leader and a role model for many.",
+    linkedin: "https://www.linkedin.com/in/aryan-patel-23283133a/",
   },
   {
     name: "Sandesh Mandora",
@@ -45,7 +45,7 @@ const teamMembers = [
     image: "/bpm.jpg",
     description:
       "He is the BPM of Sparshtech. He has a passion for technology and a talent for innovation. He is a true leader and a role model for many.",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/sandesh-mandora-0a547a382/",
   },
 ];
 

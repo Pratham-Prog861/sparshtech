@@ -54,7 +54,7 @@ export default function TermsPage() {
             <h2 className="text-2xl font-semibold mb-4">5. Contact Us</h2>
             <p className="text-muted-foreground mb-4">
               If you have any questions about these Terms, please contact us at
-              hello@sparshtech.com.
+              info@sparshtech.in.
             </p>
           </section>
         </div>

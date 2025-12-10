@@ -95,12 +95,10 @@ export default function Process() {
       ref={sectionRef}
       className="py-20 bg-secondary/20 relative overflow-hidden"
     >
-      {/* Decorative background elements */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Header with animation */}
         <div className="text-center mb-16 animate-fade-in">
           <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-primary/10 rounded-full">
             <Sparkles className="w-5 h-5 text-primary animate-spin-slow" />
@@ -117,7 +115,6 @@ export default function Process() {
           </p>
         </div>
 
-        {/* Process Steps Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {steps.map((step, index) => {
             const Icon = step.icon;
@@ -138,7 +135,6 @@ export default function Process() {
                   animationDelay: `${step.animationDelay}ms`,
                 }}
               >
-                {/* Animated gradient background */}
                 <div
                   className={`
                     absolute inset-0 bg-linear-to-br ${step.gradient} 
@@ -150,7 +146,6 @@ export default function Process() {
                   }}
                 />
 
-                {/* Shimmer effect */}
                 <div
                   className="absolute inset-0 opacity-0"
                   style={{
@@ -160,23 +155,19 @@ export default function Process() {
                   }}
                 />
 
-                {/* Animated border glow on hover */}
                 <div className="absolute inset-0 rounded-xl opacity-0 transition-opacity duration-500">
                   <div
                     className={`absolute inset-0 rounded-xl bg-linear-to-r ${step.gradient} blur-xl opacity-30`}
                   />
                 </div>
 
-                {/* Content */}
                 <div className="relative p-8 h-full flex flex-col">
-                  {/* Step Number Badge */}
                   <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
                     <span className="text-sm font-bold text-primary">
                       {index + 1}
                     </span>
                   </div>
 
-                  {/* Icon with animation */}
                   <div className="mb-6">
                     <div
                       className={`
@@ -197,17 +188,14 @@ export default function Process() {
                     </div>
                   </div>
 
-                  {/* Title with gradient animation */}
                   <h3 className="text-xl font-semibold mb-3">
                     {step.title}
                   </h3>
 
-                  {/* Description */}
                   <p className="text-muted-foreground grow">
                     {step.description}
                   </p>
 
-                  {/* Floating particles */}
                   <div
                     className={`absolute top-10 right-10 w-2 h-2 bg-linear-to-r ${step.gradient} rounded-full animate-particle-float opacity-0`}
                     style={{ animationDelay: `${step.animationDelay}ms` }}
@@ -226,7 +214,6 @@ export default function Process() {
                   />
                 </div>
 
-                {/* Bottom shine effect */}
                 <div
                   className={`
                     absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r ${step.gradient}
@@ -237,7 +224,6 @@ export default function Process() {
                   }}
                 />
 
-                {/* Corner accents */}
                 <div
                   className={`absolute top-0 left-0 w-16 h-16 bg-linear-to-br ${step.gradient} opacity-0 blur-2xl transition-opacity duration-500`}
                 />
@@ -249,7 +235,6 @@ export default function Process() {
           })}
         </div>
 
-        {/* Connecting Line Animation (Optional) */}
         <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-linear-to-r from-transparent via-border to-transparent opacity-20 -z-10" />
       </div>
     </section>

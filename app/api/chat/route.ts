@@ -21,7 +21,6 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // System prompt to guide the AI behavior
     const systemPrompt = `You are a helpful and professional AI assistant for SparshTech, a leading digital solutions agency. 
 
 Your role is to:
@@ -42,7 +41,7 @@ SparshTech specializes in:
 
 Always be polite and professional. If a user expresses interest in starting a project or needs a quote, strongly encourage them to visit the **/contact** page or reach out to the team directly.`;
 
-    // Build the conversation history with system prompt
+
     const contents = [
       {
         role: "user",
@@ -52,7 +51,7 @@ Always be polite and professional. If a user expresses interest in starting a pr
         role: "model",
         parts: [{ text: "I understand. I'll help users with their learning journey on CodeWithPratham by providing guidance, answering questions, and recommending appropriate tutorials." }],
       },
-      ...conversationHistory.slice(-10), // Keep last 10 messages for context
+      ...conversationHistory.slice(-10), 
       {
         role: "user",
         parts: [{ text: message }],
@@ -105,7 +104,6 @@ Always be polite and professional. If a user expresses interest in starting a pr
 
     const data = await response.json();
 
-    // Extract the AI response
     const aiResponse = data.candidates?.[0]?.content?.parts?.[0]?.text;
 
     if (!aiResponse) {

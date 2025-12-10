@@ -33,12 +33,10 @@ const AIChatbot = () => {
   };
 
   useEffect(() => {
-    // Scroll immediately when messages change
     scrollToBottom();
   }, [messages, isLoading]);
 
   useEffect(() => {
-    // Also scroll when chat opens
     if (isOpen) {
       setTimeout(scrollToBottom, 100);
     }
@@ -54,17 +52,14 @@ const AIChatbot = () => {
     setIsOpen(!isOpen);
   };
 
-  // Format AI response to convert markdown to HTML-like formatting
   const formatMessage = (text: string) => {
-    // Split by lines to handle different formatting
+
     const lines = text.split("\n");
     const formatted: React.ReactNode[] = [];
 
     lines.forEach((line, index) => {
-      // Handle bold text (**text** or __text__)
       let formattedLine = line;
 
-      // Bold
       formattedLine = formattedLine.replace(
         /\*\*(.+?)\*\*/g,
         "<strong>$1</strong>"
@@ -74,17 +69,14 @@ const AIChatbot = () => {
         "<strong>$1</strong>"
       );
 
-      // Italic
       formattedLine = formattedLine.replace(/\*(.+?)\*/g, "<em>$1</em>");
       formattedLine = formattedLine.replace(/_(.+?)_/g, "<em>$1</em>");
 
-      // Code blocks
       formattedLine = formattedLine.replace(
         /`(.+?)`/g,
         '<code class="bg-gray-100 px-1 rounded text-xs">$1</code>'
       );
 
-      // Check for headings
       if (line.startsWith("### ")) {
         formatted.push(
           <h4
@@ -138,7 +130,6 @@ const AIChatbot = () => {
           />
         );
       }
-      // Numbered lists
       else if (/^\d+\.\s/.test(line.trim())) {
         const content = line.trim().replace(/^\d+\.\s/, "");
         const formattedContent = content
@@ -190,13 +181,11 @@ const AIChatbot = () => {
     setIsLoading(true);
 
     try {
-      // Use Netlify function in production, Next.js API route in development
       const apiEndpoint =
         process.env.NODE_ENV === "production"
           ? "/.netlify/functions/chat"
           : "/api/chat";
 
-      // Call Gemini AI API
       const response = await fetch(apiEndpoint, {
         method: "POST",
         headers: {
@@ -248,7 +237,6 @@ const AIChatbot = () => {
 
   return (
     <>
-      {/* Chat Button */}
       <button
         onClick={toggleChat}
         className={`fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-linear-to-br from-[#A435F0] to-[#8c2ad1] text-white shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-110 ${
@@ -271,14 +259,12 @@ const AIChatbot = () => {
         )}
       </button>
 
-      {/* Chat Window */}
       {isOpen && (
         <div
           className="fixed bottom-24 right-6 z-50 w-[380px] max-w-[calc(100vw-3rem)] h-[600px] max-h-[calc(100vh-8rem)] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-gray-200 animate-in slide-in-from-bottom-8 duration-300"
           onWheel={(e) => e.stopPropagation()}
           onTouchMove={(e) => e.stopPropagation()}
         >
-          {/* Header */}
           <div className="bg-linear-to-r from-[#A435F0] to-[#8c2ad1] p-4 text-white">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
@@ -304,7 +290,6 @@ const AIChatbot = () => {
             </div>
           </div>
 
-          {/* Messages */}
           <div
             ref={messagesContainerRef}
             className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50"
@@ -360,7 +345,6 @@ const AIChatbot = () => {
             <div ref={messagesEndRef} />
           </div>
 
-          {/* Input */}
           <div className="p-4 bg-white border-t border-gray-200">
             <div className="flex gap-2">
               <input

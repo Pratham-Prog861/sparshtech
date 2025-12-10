@@ -8,13 +8,12 @@ export default function ContactPage() {
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Get in Touch</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Have a project in mind? We’d love to hear from you. Let’s discuss
+            Have a project in mind? We&apos;d love to hear from you. Let&apos;s discuss
             how we can help your business grow.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Info */}
           <div className="space-y-8">
             <div className="bg-secondary/20 p-8 rounded-xl border border-border">
               <h2 className="text-2xl font-semibold mb-6">
@@ -36,7 +35,7 @@ export default function ContactPage() {
                   <Phone className="h-6 w-6 text-primary" />
                   <div>
                     <h3 className="font-medium">Phone</h3>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                    <p className="text-muted-foreground">+91 7383474707</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
@@ -44,7 +43,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-medium">Email</h3>
                     <p className="text-muted-foreground">
-                      hello@sparshtech.com
+                      info@sparshtech.in
                     </p>
                   </div>
                 </div>
@@ -66,7 +65,6 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Contact Form */}
           <div className="bg-background p-8 rounded-xl border border-border shadow-sm">
             <h2 className="text-2xl font-semibold mb-6">Send us a Message</h2>
             <ContactForm />

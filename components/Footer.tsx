@@ -51,7 +51,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h4 className="font-semibold mb-4 text-foreground">Quick Links</h4>
             <ul className="space-y-2 text-sm">
@@ -90,7 +89,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
           <div>
             <h4 className="font-semibold mb-4 text-foreground">Services</h4>
             <ul className="space-y-2 text-sm">
@@ -129,7 +127,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
             <h4 className="font-semibold mb-4 text-foreground">Contact Us</h4>
             <ul className="space-y-4 text-sm">
@@ -143,11 +140,11 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-3 text-muted-foreground">
                 <Phone className="h-5 w-5 shrink-0" />
-                <span>+1 (555) 123-4567</span>
+                <span>+91 7383474707</span>
               </li>
               <li className="flex items-center space-x-3 text-muted-foreground">
                 <Mail className="h-5 w-5 shrink-0" />
-                <span>hello@sparshtech.com</span>
+                <span>info@sparshtech.in</span>
               </li>
             </ul>
           </div>
@@ -155,7 +152,9 @@ export default function Footer() {
 
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground text-center md:text-left">
-            © {new Date().getFullYear()} SparshTech. All rights reserved.
+            © {new Date().getFullYear()} Sparsh Tech. All rights reserved.
+            <br />
+            We are MSME certified — UDYAM-GJ-24-0168714
           </p>
           <div className="flex space-x-6 text-sm text-muted-foreground">
             <Link
