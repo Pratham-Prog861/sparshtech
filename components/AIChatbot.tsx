@@ -53,7 +53,6 @@ const AIChatbot = () => {
   };
 
   const formatMessage = (text: string) => {
-
     const lines = text.split("\n");
     const formatted: React.ReactNode[] = [];
 
@@ -129,8 +128,7 @@ const AIChatbot = () => {
             dangerouslySetInnerHTML={{ __html: formattedContent }}
           />
         );
-      }
-      else if (/^\d+\.\s/.test(line.trim())) {
+      } else if (/^\d+\.\s/.test(line.trim())) {
         const content = line.trim().replace(/^\d+\.\s/, "");
         const formattedContent = content
           .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
@@ -181,10 +179,7 @@ const AIChatbot = () => {
     setIsLoading(true);
 
     try {
-      const apiEndpoint =
-        process.env.NODE_ENV === "production"
-          ? "/.netlify/functions/chat"
-          : "/api/chat";
+      const apiEndpoint = "/api/chat";
 
       const response = await fetch(apiEndpoint, {
         method: "POST",
@@ -276,9 +271,7 @@ const AIChatbot = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold">AI Chatbot</h3>
-                  <p className="text-xs text-white/80">
-                    Powered by SparshTech
-                  </p>
+                  <p className="text-xs text-white/80">Powered by SparshTech</p>
                 </div>
               </div>
               <button
