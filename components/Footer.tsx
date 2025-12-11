@@ -25,29 +25,38 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <Link
-                href="#"
+                href="https://www.facebook.com/share/1ZL9BqDUGx/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <Facebook className="h-5 w-5" />
               </Link>
               <Link
-                href="#"
+                href="https://x.com/SparshTech27?s=09"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <Twitter className="h-5 w-5" />
               </Link>
               <Link
-                href="#"
+                href="https://www.instagram.com/sparshtech_?igsh=MWdmbDYxODdteHpqaA=="
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <Instagram className="h-5 w-5" />
               </Link>
               <Link
-                href="#"
+                href="https://www.linkedin.com/company/sparshtechin/posts/?feedView=all"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <Linkedin className="h-5 w-5" />
               </Link>
+              
             </div>
           </div>
 
@@ -133,9 +142,7 @@ export default function Footer() {
               <li className="flex items-start space-x-3 text-muted-foreground">
                 <MapPin className="h-5 w-5 shrink-0 mt-0.5" />
                 <span>
-                  123 Innovation Drive,
-                  <br />
-                  Tech City, TC 90210
+                  Remote Office, India
                 </span>
               </li>
               <li className="flex items-center space-x-3 text-muted-foreground">
