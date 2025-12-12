@@ -25,9 +25,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-medium">Our Office</h3>
                     <p className="text-muted-foreground">
-                      123 Innovation Drive,
-                      <br />
-                      Tech City, TC 90210
+                      Remote Office, India
                     </p>
                   </div>
                 </div>
@@ -48,20 +46,6 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="bg-primary text-primary-foreground p-8 rounded-xl">
-              <h2 className="text-2xl font-semibold mb-4">Join Our Team</h2>
-              <p className="mb-6 opacity-90">
-                We are always looking for talented individuals to join our
-                growing team. Check out our open positions.
-              </p>
-              <a
-                href="#"
-                className="font-medium underline underline-offset-4 hover:opacity-80"
-              >
-                View Careers &rarr;
-              </a>
             </div>
           </div>
 

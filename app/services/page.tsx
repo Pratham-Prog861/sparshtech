@@ -10,6 +10,7 @@ import {
   Cloud,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const services = [
   {
@@ -215,12 +216,12 @@ export default function ServicesPage() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-background p-8 rounded-xl border border-border shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
+              className="group bg-background p-8 rounded-xl border border-border shadow-sm hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:border-primary/50"
             >
-              <div className="h-14 w-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary">
-                <service.icon className="h-7 w-7" />
+              <div className="h-14 w-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
+                <service.icon className="h-7 w-7 group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
+              <h3 className="text-2xl font-semibold mb-4 group-hover:text-primary transition-colors duration-300">{service.title}</h3>
               <p className="text-muted-foreground mb-6">
                 {service.description}
               </p>
@@ -228,9 +229,9 @@ export default function ServicesPage() {
                 {service.features.map((feature, idx) => (
                   <li
                     key={idx}
-                    className="flex items-center text-sm text-muted-foreground"
+                    className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300"
                   >
-                    <div className="h-1.5 w-1.5 rounded-full bg-primary mr-2" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-primary mr-2 group-hover:scale-150 transition-transform duration-300" />
                     {feature}
                   </li>
                 ))}
@@ -254,25 +255,28 @@ export default function ServicesPage() {
             {Tech.map((tech, index) => (
               <div
                 key={index}
-                className="bg-background p-8 rounded-xl border border-border shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
+                className="group bg-background p-8 rounded-xl border border-border shadow-sm hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:border-primary/50"
               >
-                <div className="h-14 w-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary">
-                  <div className="h-2 w-2 rounded-full bg-primary" />
+                <div className="h-14 w-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
+                  <div className="h-2 w-2 rounded-full bg-primary group-hover:scale-150 group-hover:animate-pulse transition-all duration-300" />
                 </div>
-                <h3 className="text-2xl font-semibold mb-4">{tech.Title}</h3>
+                <h3 className="text-2xl font-semibold mb-4 group-hover:text-primary transition-colors duration-300">{tech.Title}</h3>
                 <div className="flex flex-wrap gap-2">
                   {tech.language.map((lang, idx) => (
                     <span
                       key={idx}
-                      className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium bg-secondary/50 text-foreground rounded-lg border border-border/50 hover:bg-primary/10 hover:border-primary/50 transition-all duration-200 cursor-default"
+                      className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium bg-secondary/50 text-foreground rounded-lg border border-border/50 hover:bg-primary/20 hover:border-primary hover:shadow-md hover:shadow-primary/20 hover:scale-105 transition-all duration-200 cursor-pointer"
                     >
-                      <img
+                      <Image
                         src={lang.logo}
                         alt={lang.name}
-                        className="h-4 w-4 object-contain"
+                        width={16}
+                        height={16}
+                        className="h-4 w-4 object-contain group-hover:scale-110 transition-transform duration-200"
                         onError={(e) => {
                           e.currentTarget.style.display = "none";
                         }}
+                        
                       />
                       {lang.name}
                     </span>

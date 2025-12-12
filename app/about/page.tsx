@@ -30,7 +30,7 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold mb-6">Our Story</h2>
             <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
               <p>
-                Founded in 2020, SparshTech began with a simple mission: to make
+                Founded in 2024, SparshTech began with a simple mission: to make
                 high-quality technology accessible to businesses of all sizes.
                 What started as a small group of passionate developers has grown
                 into a full-service digital agency.

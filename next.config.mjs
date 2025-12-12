@@ -6,6 +6,22 @@ const nextConfig = {
                 protocol: "https",
                 hostname: "images.unsplash.com",
             },
+            {
+                protocol: "https",
+                hostname: "www.vectorlogo.zone",
+            },
+            {
+                protocol: "https",
+                hostname: "ui.shadcn.com",
+            },
+            {
+                protocol: "https",
+                hostname: "ui.aceternity.com",
+            },
+            {
+                protocol: "https",
+                hostname: "cdn.jsdelivr.net",
+            },
         ],
     },
 
